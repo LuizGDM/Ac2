@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1508189989 source:c:\users\luiz henrique\documents\ac2\main.cpp
+	<iostream>
+	"SortS.h"
+	<time.h>
+	<stdlib.h>
+	<locale>
+
+1508178690 c:\users\luiz henrique\documents\ac2\sorts.h
+
