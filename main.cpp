@@ -10,7 +10,7 @@ int main()
 {
     setlocale(LC_ALL, "Portuguese");
     int opcao;
-    float t, t1, t2, tF, tF2, tF3;
+    float t, t1, t2, tF, tF2, tF3,DT;
     t=clock();
     srand(time(NULL));
     float  vetor[tam]={0};
@@ -47,9 +47,14 @@ int main()
                 cout << vetor[i] << "||";
             }
             tF=clock();
+            DT=(tF2-t1)-(tF3-tF2);
+            if(DT<0){
+                DT=DT*-1;
+            }
             cout <<endl<<"Tempo de execucao total do programa:"<< (tF-t)*1000/CLOCKS_PER_SEC;
             cout<<endl<<"Tempo do algoritmo Quick:"<<(tF2-t1)*1000/CLOCKS_PER_SEC;
-            cout<<endl<<"Tempo do algoritmo Insertion:"<<(tF3-tF2)*1000/CLOCKS_PER_SEC<< endl;
+            cout<<endl<<"Tempo do algoritmo Insertion:"<<(tF3-tF2)*1000/CLOCKS_PER_SEC;
+            cout<<endl<<"A diferença de tempo dos algoritmos:"<<DT*1000/CLOCKS_PER_SEC<<"segundo(s)."<<endl;
             break;
 
         case 2:
@@ -79,9 +84,14 @@ int main()
                 cout << vetor[i] << "||";
             }
             tF=clock();
+            DT=(tF2-t1)-(tF3-tF2);
+            if(DT<0){
+                DT=DT*-1;
+            }
             cout <<endl<<"Tempo de execucao total do programa:"<< (tF-t)*1000/CLOCKS_PER_SEC;
             cout<<endl<<"Tempo do algoritmo Quick:"<<(tF2-t1)*1000/CLOCKS_PER_SEC;
-            cout<<endl<<"Tempo do algoritmo Insertion:"<<(tF3-tF2)*1000/CLOCKS_PER_SEC<< endl;
+            cout<<endl<<"Tempo do algoritmo Insertion:"<<(tF3-tF2)*1000/CLOCKS_PER_SEC;
+             cout<<endl<<"A diferença de tempo dos algoritmos:"<<DT*1000/CLOCKS_PER_SEC<<"segundo(s)."<<endl;
 
     }
 }
